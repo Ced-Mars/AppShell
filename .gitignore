@@ -1,7 +1,6 @@
 # dependencies
 /app_shell/node_modules
-/server/node_modules
 /app_shell/.env
-/server/.env
-/app_shell/dist
-/server/dist
+app_shell/server/node_modules
+app_shell/server/.env
+app_shell/server/dist
