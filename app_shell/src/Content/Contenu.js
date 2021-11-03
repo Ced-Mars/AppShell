@@ -6,8 +6,8 @@ import "../css/styles.css";
 
 const initialLayouts = {
   lg: [
-    { i: "a", x: 0, y: 0, w: 1, h: 4 },
-    { i: "b", x: 1, y: 0, w: 3, h: 4 },
+    { i: "a", x: 0, y: 0, w: 5, h: 10 },
+    { i: "b", x: 5, y: 0, w: 5, h: 10 },
   ],
 };
 
@@ -37,15 +37,15 @@ function Content({
         onLayoutChange={onLayoutChange}
         isDraggable={isDraggable}
         resizeHandles={["s", "e", "se"]}
-        preventCollision={true}
+        preventCollision={false}
         compactType={null}
-        isBounded={true}
+        useCSSTransforms={true}
       >
         {items.map((key) => (
           <div
             key={key}
             className={hideResizable}
-            data-grid={{ w: 3, h: 2, x: 0, y: 0 }}
+            data-grid={{ w: 6, h: 6, x: 0, y: 0 }}
           >
             <Widget
               id={key}
