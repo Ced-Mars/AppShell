@@ -37,7 +37,8 @@ function Content({
         onLayoutChange={onLayoutChange}
         isDraggable={isDraggable}
         resizeHandles={["s", "e", "se"]}
-        preventCollision={false}
+        autoSize={true}
+        preventCollision={true}
         compactType={null}
         useCSSTransforms={true}
       >
