@@ -40,7 +40,7 @@ export default function Sidebar({
     <div>
         <React.Fragment>
           <Drawer
-            anchor={'bottom'}
+            anchor={'top'}
             open={drawerState}
             onClose={toggleDrawer}
           >

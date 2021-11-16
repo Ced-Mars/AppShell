@@ -2,7 +2,6 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import PlayCircleFilled from "@material-ui/icons/PlayCircleFilled";
 import IconButton from "@material-ui/core/IconButton";
 import Brightness4Icon from "@material-ui/icons/Brightness2";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
@@ -11,6 +10,7 @@ import Notification from "./Notification";
 import AddList from "./AddList";
 import Choix from "./Choix";
 import Sidebar from "../Menu/Sidebar";
+import { Button } from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -55,21 +55,22 @@ export default function Header({
     <AppBar position="fixed" className={classes.appbar}>
       <Toolbar>
 
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          onClick={toggleDrawer()}
-          edge="start"
-        >
-          <PlayCircleFilled />
-        </IconButton>
-
         <Typography variant="h6" noWrap>
           Projet Mars
         </Typography>
 
         <Sidebar drawerState={drawerState}
           toggleDrawer={toggleDrawer()}/>
+
+        <div className={classes.spacer} />
+
+        <Button 
+          variant="contained"
+          onClick={toggleDrawer()}
+          color="inherit"
+        >
+          Lancer Process
+        </Button>
 
         <div className={classes.spacer} />
 
