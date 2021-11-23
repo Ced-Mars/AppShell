@@ -60,7 +60,8 @@ export default function Header({
         </Typography>
 
         <Sidebar drawerState={drawerState}
-          toggleDrawer={toggleDrawer()}/>
+          toggleDrawer={toggleDrawer()}
+          setDrawerState={setDrawerState}/>
 
         <div className={classes.spacer} />
 

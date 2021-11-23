@@ -33,7 +33,8 @@ class ErrorBoundary extends React.Component {
 
 export default function Sidebar({
   drawerState,
-  toggleDrawer
+  toggleDrawer,
+  setDrawerState
   }) {
 
   return (
@@ -50,7 +51,7 @@ export default function Sidebar({
             >
               <ErrorBoundary>
                 <React.Suspense fallback={renderLoader()}>
-                  <Seq_Exe/>
+                  <Seq_Exe drawerState={drawerState} setDrawerState={setDrawerState}/>
                 </React.Suspense>
               </ErrorBoundary>
             </Box>
